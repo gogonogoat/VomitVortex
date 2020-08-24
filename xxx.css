@@ -1,0 +1,217 @@
+*{
+	font-size:95%;
+}
+
+html body{
+margin:0;
+padding:0;
+}
+
+th,td{
+padding:0;
+}
+
+table.ModList{
+background:#999;
+border-collapse: collapse;
+width:1440px;
+}
+
+table.ModList tr#HeadRow{
+background:#EEE;
+}
+
+
+table.ModList tr{
+	transition-property: background;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+}
+table.ModList tr:nth-child(odd){
+background:#DDD;
+}
+table.ModList tr:nth-child(even){
+background:#CCC;
+}
+table.ModList tr:hover{
+	background:#ffffa0;
+}
+
+th{
+	user-select: none;
+	font-family:monospace;
+	font-size:1.1rem;
+	font-weight:bold;
+	cursor:pointer;
+	background:rgba(0,0,0,0);
+	transition-property: background;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+}
+th:hover{
+	background:#ffffa0;
+}
+
+.elps{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.visible{}
+.invisible{display:none;}
+
+
+.h_preview{width:9rem;}
+.v_preview{
+	width:9rem;
+	height:4rem;
+	text-align:center;
+	background:rgba(0,0,0,0.1);
+  display: table-cell;
+  vertical-align: middle;
+
+}
+
+.v_preview img{
+	max-width:100%;
+	max-height:100%;
+}
+
+.v_name{width:10rem;}
+
+.v_note{
+width:2rem;
+text-align:center;
+}
+
+.v_author{width:5rem;}
+
+.h_directory{width:10rem;}
+.v_directory{
+	width:10rem;
+	height:2rem;
+	display: flex;
+	align-items: center;
+}
+.v_directory .view{margin-left:0.5rem;}
+
+.h_url{width:12rem;}
+.v_url{
+	width:12rem;
+	height:2rem;
+	display: flex;
+	align-items: center;
+}
+
+.v_url .view{margin-left:0.5rem;}
+.v_pack{width:5.75rem;}
+.v_depend{width:10rem;}
+
+
+.v_def,.v_patch,.v_dll{
+	width:4rem;
+	text-align:center;
+}
+
+
+
+.btn-push{
+  display: inline-block;
+  max-width: 90px;
+  text-align: left;
+  background-color: #00a3ff;
+  font-size: 0.75rem;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 4px;
+  border-bottom: 2px solid #0078d3;
+  user-select: none;
+  cursor:pointer;
+}
+.btn-push:active{
+	transform: translateY(2px);
+	background-color: #ffa300;
+	border-bottom: none;
+}
+
+
+.btn-push_d{
+  display: inline-block;
+  max-width: 90px;
+  text-align: left;
+  background-color: #7f7f7f;
+  font-size: 0.75rem;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 4px;
+  border-bottom: 2px solid #696969;
+  user-select: none;
+  cursor:pointer;
+}
+.btn-push_d:active{
+	transform: translateY(2px);
+	background-color: #7f7f7f;
+	border-bottom: none;
+}
+
+.btn-rm{
+	margin-right:0.5rem;
+}
+
+
+.str_copy:before{content:'Copy';}
+.str_go:before{content:'Go';}
+.str_stm:before{content:'Steam';}
+.str_note:before{content: '@';}
+
+.sort.desc:after{
+  content:'\25BC';
+}
+.sort.asc:after{
+  content:'\25B2';
+}
+
+
+.modal_back{
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+overflow: auto;
+background-color: rgba(255,255,255,0.5);
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.modal_box{
+background-color: #333;
+width: 75%;
+height:75%;
+}
+
+.modal_content{
+color:#FFF;
+font-size:1rem;
+padding:2rem;
+text-align:left;
+width: 100%;
+height:100%;
+overflow-y: scroll;
+box-sizing: border-box;
+}
+
+.modal_hide{display:none;}
+
+.lum-lightbox{
+background:rgba(255,255,255,0.5);
+}

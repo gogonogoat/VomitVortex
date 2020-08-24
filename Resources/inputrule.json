@@ -1,0 +1,51 @@
+[
+    {
+        "Path"	: "./About/Preview.png",
+        "Then"	: "currentAbsPath(i)"
+    },{
+        "Path"	: "./About/About.xml",
+        "Then"	: "xpath_GetValue(i,\"name\")"
+    },{
+        "Path"	: "./About/About.xml",
+        "Then"	: "getModalButtonForUnityUiXml(i, 'description','btn-push note', 'btn-push_d', 'str_note')"
+    },{
+        "Path"	: "./About/About.xml",
+        "Then"	: "xpath_GetValue(i, 'author', )"
+    },{
+        "Path"	: "",
+        "Then"	: "getSuffixButton( i, \"https://steamcommunity.com/sharedfiles/filedetails/?id=\", \"\", \"btn-push btn-rm\", \"btn-push_d btn-rm\", \"str_stm\")"
+    },{
+        "Path"	: "",
+        "Then"	: "currentAbsPath(i)"
+    },{
+        "Path"	: "",
+        "Then"	: "currentRelPath(i)"
+    },{
+        "Path"	: "",
+        "Then"	: "isExistFileFromXpath(i, True, 'Defs', '', 'xml')"
+    },{
+        "Path"	: "",
+        "Then"	: "isExistFileFromXpath(i, True, 'Patch', '', 'xml')"
+    },{
+        "Path"	: "",
+        "Then"	: "isExistFileFromExt(i, True, 'dll')"
+    },{
+        "Path"	: "./About/About.xml",
+        "Then"	: "xpath_GetValue(i,\"packageId\")",
+	  "Else"		:"-"
+    },{
+        "Path"	: "./About/About.xml",
+        "Then"	: "xpath_GetValue(i,\"modDependencies/li/packageId\")",
+	  "Else"		:"-"
+    },{
+        "Path"	: "./About/About.xml",
+        "Then"	: "xpath_GetValueToButton(i,\"url\",\"btn-push\", \"btn-push_d\", \"str_go\")"
+    },{
+        "Path"	: "./About/About.xml",
+        "Then"	: "xpath_GetValue(i,\"url\")",
+	  "Else"		:"-"
+    },{
+        "Path"	: "",
+        "Then"	: "birthtime(i)"
+    }
+]
